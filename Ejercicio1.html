@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Stylesheet" href="Styles.css"/>
+    <script src="https://kit.fontawesome.com/48db06bb17.js" crossorigin="anonymous"></script>
+    <title>Trabajo Práctico</title>
+    <script>
+        function mensaje(){
+            var valor= document.frm.num.value;
+            var nombres=[];
+            var mensj;
+            for(i=1;i<=valor;i++){
+                nombre=prompt("Ingrese el nombre: ");
+         
+                 if (nombre == null || nombre == "") {
+                     mensj = "Has cancelado o introducido el nombre vacío";  
+                     alert(mensj);              
+                 } else {
+                         nombres.push(nombre);
+                  }
+            
+            }
+            document.write(nombres);
+        }
+    </script>
+  
+</head>
+<body class="grid-container">
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo nav-link"> ♥♥♥ </a>
+         
+            <ul class="nav-menu">
+                <li class="nav-menu-item">
+                    <a href="index.html" class="nav-menu-link nav-link">Home</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="Ejercicio1.html" class="nav-menu-link nav-link">Ejercicio 1</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="Ejercicio2.html" class="nav-menu-link nav-link">Ejercicio 2</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="Ejercicio3.html" class="nav-menu-link nav-link">Ejercicio 3</a>
+                </li>
+               
+            </ul>
+        </nav>
+    </header>
+    <article class="main">
+        <div class="grid-cont-main">        
+            <img class= "foto-fondo" src="top-view-person-writing-on-laptop-with-copy-space.jpg">
+    </div>
+    <div class="texto-encima cv">
+        <form id="frm"name="frm" class="formulario2" method="GET" onsubmit="mensaje()">
+    
+             <label> Ingrese un número entre 3 y 10:</label> 
+             <br>
+            <input type="number" placeholder="Num." id="num" min="3" max="10"/>
+                
+                <br>
+            <input type="submit" value="Aceptar" />
+        
+            </form>
+        </div>
+       </div>
+    </article>
+    <aside class="sidebar"><img src="maxresdefault.jpg" class="foto-banner"></aside>
+
+    <footer class="footer">Carla Paz | carla.lorenapaz@gmail.com | tel: 11 6355 6952</footer>
+
+
+
+</body>
+</html>

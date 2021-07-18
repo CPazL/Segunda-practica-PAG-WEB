@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Stylesheet" href="Styles.css"/>
+    <script src="https://kit.fontawesome.com/48db06bb17.js" crossorigin="anonymous"></script>
+    <title>Trabajo Práctico</title>
+    <script>
+        function listar(){
+            var opcion=document.ejerc_2.op.value;
+            var buscados = [];
+            event.preventDefault();
+            for(i=1;i<=100;i++){
+
+                if(opcion==1){
+                    if(i%2!=0 && i%5==0){
+                        buscados.push(i);
+                    }                }
+
+                if(opcion==2){
+                    if(i%2==0 && i%5==0){
+                        buscados.push(i);
+                    }
+                }
+
+                }
+                document.write(buscados);
+            }
+        
+    </script>
+
+
+</head>
+<body class="grid-container">
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo nav-link"> ♥♥♥ </a>
+         
+            <ul class="nav-menu">
+                <li class="nav-menu-item">
+                    <a href="index.html" class="nav-menu-link nav-link">Home</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="Ejercicio1.html" class="nav-menu-link nav-link">Ejercicio 1</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="Ejercicio2.html" class="nav-menu-link nav-link">Ejercicio 2</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="Ejercicio3.html" class="nav-menu-link nav-link">Ejercicio 3</a>
+                </li>
+               
+            </ul>
+        </nav>
+    </header>
+
+    <article class="main">
+        <div class="grid-cont-main">
+        <div>
+            <img class= "foto-fondo" src="top-view-person-writing-on-laptop-with-copy-space.jpg">
+        </div>
+        <div class="texto-encima cv">
+            
+    <form id="ejerc_2" name="ejerc_2" method="GET" onsubmit="listar()">
+        <label>Lista de números impares o pares (según elección) en un rango de 1 a 100 : </label><br><br>
+
+        <input type="radio" id="impar" name="op" value=1> IMPAR
+        <input type="radio" id="par" name="op" value=2> PAR
+        
+        <br>
+        <br>
+        <input type= "submit" value="Enviar">
+    </form>
+
+    </div>
+    </article>
+    <aside class="sidebar"><img src="maxresdefault.jpg" class="foto-banner"></aside>
+
+    <footer class="footer">Carla Paz | carla.lorenapaz@gmail.com | tel: 11 6355 6952</footer>
+    
+</body>
+</html>

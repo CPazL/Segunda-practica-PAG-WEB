@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Stylesheet" href="Styles.css"/>
+    <script src="https://kit.fontawesome.com/48db06bb17.js" crossorigin="anonymous"></script>
+    <title>Trabajo Práctico</title>
+  <script>
+      function noCero(n) {
+          n=+n;
+            if (!n) {  
+             alert("No se puede dividir por nada o por cero");
+             throw new Error('Dividendo inválido');
+             }
+             return n;
+            }
+      function Operaciones(){
+          var lista=document.getElementById("opciones");
+          var valor=lista.options[lista.selectedIndex].value;
+          var texto= lista.options[lista.selectedIndex].text;
+         
+        var x = parseInt(document.frm.v1.value);
+        var y = parseInt(document.frm.v2.value);
+                        
+        var resultado=0;
+
+        switch(valor){
+            case "1": resultado=x+y;
+                break;
+            case "2": resultado=x-y;
+                break;
+            case "3": resultado=x*y;
+                break;
+            case "4": 
+                resultado=x/noCero(y);
+                break;
+
+            default: break;
+        }
+         document.write("El resultado de "+texto+" entre los números  "+x+ " y "+ y +" es:  "+resultado);
+      }
+  </script>
+</head>
+<body class="grid-container">
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo nav-link"> ♥♥♥ </a>
+         
+            <ul class="nav-menu">
+                <li class="nav-menu-item">
+                    <a href="index.html" class="nav-menu-link nav-link">Home</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="Ejercicio1.html" class="nav-menu-link nav-link">Ejercicio 1</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="Ejercicio2.html" class="nav-menu-link nav-link">Ejercicio 2</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="Ejercicio3.html" class="nav-menu-link nav-link">Ejercicio 3</a>
+                </li>
+               
+            </ul>
+        </nav>
+        
+    </header>
+
+    <article class="main">
+        <div class="grid-cont-main">
+        <div>
+            <img class= "foto-fondo" src="top-view-person-writing-on-laptop-with-copy-space.jpg">
+        </div>
+
+        <div class="texto-encima cv">
+            <form name="frm" id="frm" class="formulario2" method="GET" onsubmit="Operaciones()">
+                <br>
+                <label>Ingrese dos números y seleccione la operación a realizar: </label>
+               <br><br>
+                <input type="number" name="v1" id="v1" placeholder="Primer número" >
+                <input type="number" name="v2" id="v2" placeholder="Segundo número" >
+                
+                <select name ="opciones" id ="opciones">
+                    <option value= "1"> sumar</option>
+                    <option value= "2"> restar</option>
+                    <option value= "3"> multiplicar</option>
+                    <option value= "4"> dividir</option>
+                </select>
+                <br><br>
+              <input type="submit" value="Enviar">
+
+                <br>
+     
+                </form>
+    </div>
+    </article>
+    <aside class="sidebar"><img src="maxresdefault.jpg" class="foto-banner"></aside>
+
+    <footer class="footer">Carla Paz | carla.lorenapaz@gmail.com | tel: 11 6355 6952</footer>
+    
+</body>
+</html>

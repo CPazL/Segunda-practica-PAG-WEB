@@ -1,0 +1,247 @@
+*{
+    margin: 0;
+    box-sizing:border-box;
+    padding:0;
+}
+html{
+    height:80%;
+}
+body{
+    font-family: "Segoe UI";
+}
+.foto-fondo{
+width: 1450px; height:1000px ;
+
+}
+.foto-banner{
+   
+        width: 1000px; height: 250px;
+    margin-right:auto;
+    justify-content:center;
+
+}
+ul{
+list-style:none; font-size:17px;
+}
+.pcv{
+    list-style:none; font-size:16px;
+}
+.log-reg{
+    background-color: #EFEDD1;
+    box-shadow: 2px 2px 10px 1px rgba(0,0,0,0.75);
+    border-radius: 6px;
+    padding: 50px ;
+    text-align: center;
+    margin-right:auto;
+    justify-content:center;
+  position: absolute;
+  top: 35%;
+  left: 40%;
+  margin: -30px 0 0 -35px;
+}
+.grid-container>*{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+}
+.grid-container{
+    display:grid;
+    gap:10px;
+    grid-template-areas:
+        "header"
+        "main"
+        "sidebar"
+         "footer";
+
+background-color: #575757;
+}
+
+.header{
+    grid-area:header;
+    background-color: 	#575757;
+    height: 100px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    justify-content:center;
+}
+.sidebar{
+    grid-area: sidebar;
+    width: 1500px; 
+    height: 320px; 
+    
+   align-items:center;
+    margin-right:auto;
+    justify-content:center;
+
+}
+.main{
+    grid-area:main;
+    width: 1500px; 
+    height: 1050px;
+      align-items:center;
+    text-align: center;
+    margin-right:auto;
+    justify-content:center;
+}
+
+.footer{
+    grid-area:footer;
+    width:1500px; 
+    height: 100px;
+    padding: 2px;  
+        align-items:center; 
+              text-align: center;
+    margin-right:auto;
+    justify-content:center;   
+    color:white;
+    font-size:15px; 
+}
+.nav{ /** Barra de navegación*/ 
+grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    max-width:1000px;
+    margin: 0 auto;
+}
+.nav-link{
+    color: white;
+    text-decoration: none;
+}
+.logo{
+    font-size: 40px;
+    font-weight:bold;
+    padding:0 40px;
+    line-height: 80px; /*alto de línea 80pixel y queda centrado*/
+    font-family: "Consolas";
+    color:white;
+    font-style:normal;
+
+}
+.nav-menu{
+    display: flex; /* los elementos quedan dispersos de forma horizontal*/
+    margin-right: 40px; /* quedan separado de la izquierda 40 pixeles*/
+    list-style: none; /* se elimian los puntos*/
+}
+.nav-menu-item{
+    font-size: 18px; /*tamaño de la fuente*/
+    margin: 0 10px; /* margen arriba-abajo =0 e izq-dere= 10 px**/
+    line-height:80px;/**Centra la imagen**/
+    text-transform: uppercase;
+    width: max-content;
+}
+.nav-menu-link{
+    padding: 8px 12px;
+    border-radius: 3px;
+}
+.nav-menu-link:hover{
+    background-color:#a8a8a8;
+    transition:0.5s; /**Para que elefecto no se tan brusco*/
+}
+.button{
+    color: #4D5656;
+    text-decoration: none;
+    margin: 0 auto;
+}
+.nav-toggle{
+    color: white;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height:60px;
+    display: none;
+
+}
+.texto-encima{
+
+    position: absolute;
+    box-shadow: 2px 2px 10px 1px rgba(0,0,0,0.75);
+    padding: 50px ;
+    text-align: center;
+    font-size: 20px;   
+    justify-content:center;
+     top: 35%;
+     left: 30%;
+      margin: -30px 0 0 -90px;
+    width:50%;
+}
+
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th{
+    background-color:#ee9658;
+}
+.td1{
+    background-color:#669af0;
+}
+.td2{
+    background-color:#bed1f9;
+}
+.imagen{
+      width: 50px; height: 50px;
+}
+.cv{
+    font-family:"Tw Cen MT";
+    color: #3a4041;
+}
+@media(max-width: 900px){ /**media query**/
+ .grid-container{
+   display:grid;
+    gap:10px;
+
+    grid-template:
+    "header header "100px
+    "main sidebar" 500px
+    "footer footer" 100px
+    200px auto;
+  }        
+
+.header{
+    grid-area: header;
+        height: 60px;
+}
+
+.logo{
+    font-size: 25px;
+    padding:0 20px;
+    line-height: 60px; /*alto de línea 80pixel y queda centrado*/
+}
+.nav-menu{
+    display: column; /* los elementos quedan dispersos de forma columna*/
+    margin-right: 20px; /* quedan separado de la izquierda 40 pixeles*/
+    align-items:center;
+    background-color:#696969;
+    position:fixed;
+    left:0;
+    top: 60px;
+    width:100%;
+    padding:20px 0;
+    height: calc(100%- 60px);
+    overflow-y:auto; /**barra de Scroll*/
+    left: 10%
+}
+.nav-menu-item{
+    line-height:70px;
+}
+.nav-menu-link{
+    padding: 8px 12px;
+    border-radius: 3px;
+}
+.nav-menu-link:hover,
+.nav-menu-link_active{
+    background:none;
+    color:#4682B4;
+}
+.nav-toggle{
+   display:block;
+   
+    }
+.nav-menu_visible{
+    left:0;
+}}
